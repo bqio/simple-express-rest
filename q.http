@@ -1,0 +1,29 @@
+@host=http://localhost:3000
+
+POST {{host}}/api/posts HTTP/1.1
+content-type: application/json
+
+{
+    "author": "bqio",
+    "title": "New post",
+    "content": "data"
+}
+
+###
+
+GET {{host}}/api/posts HTTP/1.1
+
+###
+
+GET {{host}}/api/posts/612cb29b4e94c8f8d873d0ee HTTP/1.1
+
+###
+
+PUT {{host}}/api/posts HTTP/1.1
+content-type: application/json
+
+{"_id":"612cb29b4e94c8f8d873d0ee","author":"bqio","title":"New post 2","content":"Simple content","__v":0}
+
+###
+
+DELETE {{host}}/api/posts/612cb957fa312dbb32a7b096 HTTP/1.1
