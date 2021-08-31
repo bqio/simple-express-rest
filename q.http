@@ -27,3 +27,13 @@ content-type: application/json
 ###
 
 DELETE {{host}}/api/posts/612cb957fa312dbb32a7b096 HTTP/1.1
+
+###
+
+POST {{host}}/api/auth/signup HTTP/1.1
+content-type: application/json
+
+{
+    "username": "admin",
+    "password": "123"
+}

@@ -5,8 +5,8 @@ class PostController {
     try {
       const posts = await PostService.getAll();
       res.json(posts);
-    } catch (error) {
-      res.json(error);
+    } catch (e) {
+      res.json({ error: e.message });
     }
   }
   async getOne(req, res) {
